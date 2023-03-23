@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+  ogfin_php_ws:
+    image: ogfin_php_ws:1.0.0
+    build: .
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    volumes:
+      - $PWD/user_data:/home/user
+    ports:
+      - 8000:8000
+      # - 8400:8000
+      # - 8401:8001
+      # - 8402:8002
+      # - 8403:8003
+      # - 8404:8004
